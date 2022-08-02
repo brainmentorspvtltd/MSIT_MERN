@@ -1,0 +1,56 @@
+$()
+add(); 0
+add(10) ; 10
+add(1,2) ; 3
+add(1,2,3,4,5); 15
+add(1,”2”,3,”4”,”Amit”) - 10
+add([1,”2”,3,”4”,”5”,”Amit”],”5”,”2”) - 22
+function one(){
+return 1 ; 
+}
+add([one,”2”,3,”4”,”5”,”Amit”],”5”,”2”) - 22
+
+
+
+
+
+
+JavaScript
+
+Data Types
+Value Type
+1. number
+2. string - “” , ‘’, `` (BackTick ES6 2015)
+3. undefined
+4. boolean
+5. bigint ES11 2020
+6.
+7.
+
+Reference Type (Address , Mutable)
+e.g [] , {}, function
+
+Es12 compatibility matrix
+
+
+
+Dynamically Typed Language
+Loosely Typed 
+1. Brenden Eich (1995) Scheme , Self - Functional Programming
+2. Netscape Navigator - Dynamic
+3. Java Syntax Script (Small Prg)
+4. ES (Ecma Script) ES 12
+Upcoming ES 13 
+Chromium
+Chrome Canary
+Chrome
+
+
+2007- Client Side Coding
+2012 Angular JS
+2015 React JS
+2016 Angular
+2018 VueJS
+
+OOPS
+Java - Server Side 
