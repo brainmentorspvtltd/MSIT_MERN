@@ -1,0 +1,223 @@
+var a;
+undefined
+typeof a;
+'undefined'
+a=100;
+100
+typeof a;
+'number'
+a=10.20;
+10.2
+typeof a;
+'number'
+a=1;
+1
+typeof a;
+'number'
+a=1001010010101;
+1001010010101
+typeof a;
+'number'
+a="Amit";
+'Amit'
+typeof a;
+'string'
+a= 'Amit';
+'Amit'
+typeof a;
+'string'
+a= 'A';
+'A'
+typeof a;
+'string'
+a= `hgkdfjhghkjfhgkhfdghkjfd
+jglkdfjhlkfghjkl
+hgdfkjhgf
+ghdjk`;
+'hgkdfjhghkjfhgkhfdghkjfd\njglkdfjhlkfghjkl\nhgdfkjhgf\nghdjk'
+console.log(a);
+VM439:1 hgkdfjhghkjfhgkhfdghkjfd
+jglkdfjhlkfghjkl
+hgdfkjhgf
+ghdjk
+undefined
+typeof (a);
+'string'
+typeof ((a));
+'string'
+a = true;
+true
+typeof a;
+'boolean'
+a=100000000000;
+100000000000
+typeof a;
+'number'
+a= Number.MAX_SAFE_INTEGER;
+9007199254740991
+a++;
+9007199254740991
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a = 9007199254740992n;
+9007199254740992n
+typeof a;
+'bigint'
+a++;
+9007199254740992n
+a++;
+9007199254740993n
+a++;
+9007199254740994n
+a++;
+9007199254740995n
+a++;
+9007199254740996n
+a++;
+9007199254740997n
+var arr = [10,20,30,40,50];
+undefined
+typeof arr;
+'object'
+arr instanceof Array;
+true
+typeof Array;
+'function'
+var amit = {id:111,phone:2222, city:'Delhi'}; // Key, Value Pair
+undefined
+typeof amit;
+'object'
+arr instanceof Array;
+true
+amit instanceof Array;
+false
+amit instanceof Object;
+true
+typeof Object;
+'function'
+arr instanceof Object;
+true
+function add(){
+    console.log("I am Add ");
+}
+undefined
+add();
+VM1572:2 I am Add 
+undefined
+add(10,20);
+VM1572:2 I am Add 
+undefined
+add("Amit");
+VM1572:2 I am Add 
+undefined
+add(true);
+VM1572:2 I am Add 
+undefined
+add([120,22]);
+VM1572:2 I am Add 
+undefined
+console.dir(add);
+VM1814:1 ƒ add()arguments: nullcaller: nulllength: 0name: "add"prototype: {constructor: ƒ}[[FunctionLocation]]: VM1572:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+function add(){
+    console.log("I am Add ", arguments.length);
+}
+undefined
+add();
+VM1936:2 I am Add  0
+undefined
+add(10);
+VM1936:2 I am Add  1
+undefined
+add(10,20,30);
+VM1936:2 I am Add  3
+undefined
+add(10,20,30,[40,50]);
+VM1936:2 I am Add  4
+undefined
+function add(){
+   // console.log("I am Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + arguments[i];
+}
+    return sum;
+}
+undefined
+add();
+0
+add(10,20,30,40,50);
+150
+add(10,20,"30",40,50);
+'30304050'
+parseInt("10");
+10
+function add(){
+   // console.log("I am Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + parseInt(arguments[i]);
+}
+    return sum;
+}
+undefined
+add(10,20,"30",40,50);
+150
+add(10,20,"30","TEN",50);
+NaN
+10-"Amit"
+NaN
+typeof 10;
+'number'
+typeof NaN;
+'number'
+isNaN(10-"AMIT")?0:1;
+0
+function add(){
+   // console.log("I am Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+add(10,20,"30","TEN",50);
+110
+function one(){
+    return 1;
+    
+}
+undefined
+function two(){
+    return "2";
+}
+undefined
+add(one, two, "3",4,"Amit");
+7
+function add(){
+   // console.log("I am Add ", arguments.length);
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++){
+    if(typeof arguments[i] =="function"){
+        arguments[i] = arguments[i]();
+    }
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+}
+    return sum;
+}
+undefined
+add(one, two, "3",4,"Amit");
+10
