@@ -1,0 +1,61 @@
+const MAX = 100;
+undefined
+MAX++;
+VM546:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM546:1
+const ARR = [10,20,30,40];
+undefined
+ARR[0] =1000;
+1000
+var obj = {id:101, name:'Amit' 1:'P',2:'A'};
+VM751:1 Uncaught SyntaxError: Unexpected number
+var obj = {id:101, name:'Amit', 1:'P',2:'A'};
+undefined
+obj.id;
+101
+obj.name;
+'Amit'
+obj['id'];
+101
+obj.1;
+VM873:1 Uncaught SyntaxError: Unexpected number
+obj[1];
+'P'
+var obj2 = {first name:'Amit'}
+VM966:1 Uncaught SyntaxError: Unexpected identifier
+obj2['first name'] ='Amit';
+VM1037:1 Uncaught ReferenceError: obj2 is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1037:1
+var obj2 = {};
+obj2['first name'] ='Amit';
+'Amit'
+obj2;
+{first name: 'Amit'}
+obj;
+{1: 'P', 2: 'A', id: 101, name: 'Amit'}
+var t = 1;
+undefined
+obj[t];
+'P'
+obj.t;
+undefined
+obj;
+{1: 'P', 2: 'A', id: 101, name: 'Amit'}
+for(let key in obj){
+    console.log(key);
+}
+VM1302:2 1
+VM1302:2 2
+VM1302:2 id
+VM1302:2 name
+undefined
+for(let key in obj){
+    console.log(key, obj[key]);
+}
+VM1354:2 1 P
+VM1354:2 2 A
+VM1354:2 id 101
+VM1354:2 name Amit
+undefined
