@@ -1,0 +1,25 @@
+function add(x,y){
+    return x + y;
+}
+undefined
+function show(){
+console.log("I am show ");
+
+}
+undefined
+show(); // Call
+VM563:2 I am show 
+undefined
+var q = new show();
+VM563:2 I am show 
+undefined
+typeof q;
+'object'
+const w = ()=>100;
+undefined
+w();
+100
+var t = new w();
+VM758:1 Uncaught TypeError: w is not a constructor
+    at <anonymous>:1:9
+(anonymous) @ VM758:1
