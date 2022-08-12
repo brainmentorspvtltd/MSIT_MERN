@@ -1,0 +1,12 @@
+var obj = {id:1001, name:'Amit'};
+undefined
+obj.id;
+1001
+var {id, name} = obj;
+undefined
+id;
+1001
+name;
+'Amit'
+class A{}
+undefined
