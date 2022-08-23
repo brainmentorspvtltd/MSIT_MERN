@@ -1,0 +1,12 @@
+Get the Data from the WEB API/ BACKEND
+a) JSON 
+i) Bring the JSON from Some WebAPI
+ii) Create Own (Fake API) and Host it on Git
+b) put the URL of API in .env file
+KEY = VALUE
+c) Call the API by Using AXIOS, and we created the APIClient for consuming the WebAPI.
+d) From the Component call the ApiClient , Get the promise from the APIClient.
+The Call can be on Component Load or either when some event fire.
+If data is coming on Component Load then we need to use useEffect hook.
+e) get the data from the promise and set in state.
+f) print the data in JSX , if the data is multiple then iterate the data using map function.
