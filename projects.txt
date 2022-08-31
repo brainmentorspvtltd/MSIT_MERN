@@ -1,0 +1,36 @@
+Friday- Online 
+All Project Based on MERN.
+Project Structure, Clean Code , HardCoding
+6Hrs*6 = 36Hrs
+All are MVP
+App Name: 
+1. Notes Taking App - HandWritten Notes - HTML 5 Canvas
+2. Online TicTacToe Gaming , Player Challenges, Live DashBoard
+3. Collaboration Drawing b/w the Teams.  - HTML5, Socket.io
+4. Polling App / E-Vote - CRUD 
+5. ToDo App - Drag and Drop - HTML5
+6. Music Store - HTML5 Audio (iTunes) - Node JS - Itunes - Songs URL (Send ) Front End
+7. Motor Service App - CRUD
+8. Shopping App (Any kind of) - Shoes, Med, Pizza - CRUD
+9. Food Order and Tracking App - CRUD
+10. Video Meeting App - (https://www.npmjs.com/package/google-meet-api)
+11. Online IDE, Compile and Execute (React Ace), child process
+12. Travel Log App - CRUD or (Strapi)
+13. Alexa Clone - HTML5 Mic + Text to Speech + AXIOS (DB - Keyword , URL)
+14. Share Market App - API Calls (BackEnd) + Graph
+15. Resume Builder (5 Template) + Data Filling + PDF 
+16. Billing App - Big Bazar - Email (NodeMailer) , History, Search (CRUD)
+17. Car Compare App (API Calls) (Model) Compare (Max 4)
+18. TimeTable App - React , PDF Download
+19. Reminder App - Notification (FireBase Cloud Message )
+20. FaceBook page connector - FaceBook API
+21. Chat Assistance - Socket.io (Public Chat)
+22. LeetCode - Compiler, TestCases 
+23. Attendance App  - CRUD
+24. Movie Booking App - CRUD / Shopping
+25. Flight Booking App - CRUD / Shopping
+26. Flight Tracker / Friend Tracker - Google Map (Direction API)
+27. Expense Tracker - CRUD
+28. Expense Splitter- CRUD with Accounts
+29. Rent App - Shopping
+30. E-Book Store - Shopping
