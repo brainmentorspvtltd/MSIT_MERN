@@ -1,0 +1,100 @@
+BackEnd Steps
+1. Make DB Connection
+e.g 
+const mongoose = require('mongoose');
+const URL = 'mongodb+srv://amit:amit123456@cluster0.y6jwf5b.mongodb.net/pizzadb?retryWrites=true&w=majority';
+mongoose.connect(URL,{maxPoolSize:5},(err)=>{
+    if(err){
+        console.log('DB Error ', err);
+    }
+    else{
+        console.log('DB Connection Created...');
+    }
+});
+module.exports = mongoose;
+
+
+
+2. Create Schema/Model
+e.g 
+// Collection Structure
+const { SchemaTypes } = require('mongoose');
+const connection = require('../connection');
+const Schema = connection.Schema;
+const userSchema = new Schema({
+    'userid':{type:SchemaTypes.String, required:true, unique:true},
+    'password':{type:SchemaTypes.String, required:true},
+    'personalInfo':{},
+    'address':{type:SchemaTypes.Array}
+});
+const UserModel = connection.model('users', userSchema);
+module.exports = UserModel;
+
+3. Create Repository
+const UserModel = require('../models/user');
+module.exports = {
+    add(userObject){
+        var promise = UserModel.create(userObject);
+        return promise;
+    },
+    find(userObject, response){
+        UserModel.findOne({userid:userObject.userid, password:userObject.password},(err, doc)=>{
+            if(err){
+                response.json({message:'Some DB Error  '});
+            }
+            else if(doc){
+                response.json({message:'Welcome '+userObject.userid});
+            }
+            else{
+                response.json({message:'Invalid Userid or Password'});
+            }
+        })
+    },
+    update(userObject){
+        UserModel.updateOne({userid:userObject.userid},{password:userObject.password}, (err)=>{
+            if(err){
+
+            }
+            else{
+                
+            }
+        });
+    },
+    remove(userid){
+
+    }
+}
+
+4. Call Repository from Controller
+
+module.exports = {
+    login(request, response){
+        //console.log(request.body);
+        const userObject = request.body;
+        console.log('USER #### ', userObject);
+        user_operations.find(userObject, response);
+        // if(userObject.userid === userObject.password){
+        //     response.json({message:messages['welcome']+userObject.userid});
+        // }
+        // else{
+        //     response.json({message:messages['invalid']});
+        // }
+    },
+
+}
+
+5. Call Controller from Routes
+userRoutes.post('/register', userCtrl.register);
+
+
+6. Call Routes from app.js
+app.use('/',require('./routes/user'));
+
+
+7. Make sure all URL’s maintain in .env file in backend.
+
+
+
+
+
+
