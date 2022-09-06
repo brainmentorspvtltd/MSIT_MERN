@@ -1,0 +1,86 @@
+Cloud Computing
+
+- Cloud Deployments
+  - Public Cloud : AWS, Microsoft Azure, GCP
+  - Private Cloud : VMWare
+  - Hybrid Cloud : Combination of Public and Private
+
+- Cloud Services
+  - IaaS - Infrastructure as a Service
+  - PaaS - Platform as a Service
+  - SaaS - Software as a Service
+
+Pay as you go
+
+
+1. Create account on aws
+2. Create EC2 Instance (setup machine)
+3. Upload project on S3 Storage
+4. Create IAM role so that aws can access files on S3
+5. Setup node in EC2
+6. Copy files from S3 to EC2
+7. Install required modules
+8. Start Server
+
+MERNFull Stack Deployment EC2 
+
+On Ubuntu Server EC2  
+
+1. upload your projects to s3
+2. copy project to ec2 instance from s3 (aws s3 cp s3://bucket-name/object.zip . )
+
+//update os
+sudo apt-get update -y
+//install node version manager (NVM)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+//activate NVM
+. ~/.nvm/nvm.sh
+//install node
+nvm install --lts
+
+Create IAM user Role for S3 connection with EC2
+Update Role in actions for EC2
+Create Bucket on S3 and upload zip on it
+
+//Install AWS CLI
+sudo apt install awscli
+aws --version
+
+//install unzip
+sudo apt-get install -y unzip
+
+check buckets available in S3
+aws s3 ls
+
+to copy and paste in from S3 to EC2 current directory
+aws s3 cp s3://app-bucket-bmpl/pizza-backend-v5.zip .
+aws s3 cp s3://app-bucket-bmpl/today-codes.zip .
+
+unzip pizza-backend-v5.zip
+unzip today-codes.zip
+
+Remove unnecessary files
+sudo rm -rf __MACOSX pizza-backend-v5.zip today-codes.zip
+
+change directory
+cd pizza-backend
+
+install packages
+npm i
+
+open browser and type
+http://13.233.94.133:1234
+
+to run server
+node app.js
+
+http://13.127.32.60:1234/register
+
+start react app
+npm run start
+
+
+
+
+
