@@ -1,0 +1,2 @@
+PORT=7777
+DB_URL=mongodb+srv://pizzauser:test123456@cluster0.y6jwf5b.mongodb.net/pizzaapp_msit?retryWrites=true&w=majority
